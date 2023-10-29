@@ -1,0 +1,23 @@
+
+
+import numpy as np 
+import cv2 
+img = cv2.imread(‘sample2.jpg') cv2.imshow(‘show',img) 
+cv2.imwrite(‘photo.jpg',img)
+cv2.waitKey(0) 
+cv2.destroyAllWindows()
+	
+import cv2
+image = cv2.imread(‘sample1.png')
+greyImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imwrite('gray_image.png', greyImage)
+cv2.imshow(‘Color_image',image)
+cv2.imshow(‘Grey_image', greyImage) 
+cv2.waitKey(0)                 
+cv2.destroyAllWindows()        
+Import cv2
+img = cv2.imread(‘sample2.jpg')
+print (img.shape) #(342, 548, 3)
+print (img.size)  #562248
+print (img.dtype) #uint8 
+
