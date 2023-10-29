@@ -1,6 +1,6 @@
 # ML-programs
-For beginners
-Detecting diabetes in indians 
+#For beginners
+#Detecting diabetes in indians 
 from numpy import loadtxt
 from keras.models import Sequential
 from keras.layers import Dense
