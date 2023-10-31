@@ -1,0 +1,26 @@
+import mysql.connector as conn
+db = conn.connect (host=" localhost" ,user="root",
+password="root",database="emp")
+cu = db.cursor()
+sql3 = "create table employe(emp_id varchar(10), name
+varchar(20),dept varchar(10),salary varchar(10))"
+cu.execute(sql3)
+sql4 = "Insert into employee values(%s,%s,%s,%s)";
+val=[('001','bharath','bca','950000'),
+('002','arun','bca','75000'),
+('003','hari','bsc','550000'),
+('004','lokesh','bcom','15000')]
+cu.executemany(sql4,val)
+db.commit()
+sql5 = "select * from employee"
+cu.execute(sql5)
+det=cu.fetchall()
+print(det)
+sql6 = "delete from employee where emp_id='004';"
+cu.execute(sql6)
+sql7="select * from employe22"
+cu.execute(sql7)
+details=cu.fetchall()
+for i in details:
+print(i)
+db.close()
