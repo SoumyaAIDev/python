@@ -1,0 +1,26 @@
+    tup1=()
+print(tup1)
+print(type(tup1))
+tup2=(45,)
+print('single element tuple',tup2)
+tup3=tuple(range(10,20))
+print('tuple with range',tup3)
+for i in tup3:
+     print(i)
+     l1=[20,30,40]
+     tup5=tuple(l1)
+     print('tuple from list is',tup5)
+     tup6=tup5+tup3
+     print('tuple by concatenation',tup6)
+     print('tuple slicing',tup6[2:7])
+     print('tuple from beginning',tup6[ :8])
+     print('count of a number',tup6.count(20))
+     print('position of the no is ',tup6.index(30))
+     print('min of tuple',min(tup6))
+     print('max of tuple',max(tup6))
+     print('length of tuple',len(tup6))
+     print('sort without modifying tuple is ',sorted(tup6))
+     t=tup6*3
+     print('new tuple by repetition of tuple',t)
+     print('presence of element in tuple',(40 in tup6))
+     print('absence of elemnet in tuple',(500 
