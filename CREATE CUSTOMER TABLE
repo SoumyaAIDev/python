@@ -1,0 +1,24 @@
+import mysql.connector as conn
+db=conn.connect(host="localhost", user="root",
+password="root",database="emp")
+cu=db.cursor()
+sql1="create table customer(customer_id varchar(10),cname
+varchar(20),age varchar(10),country varchar(10));"
+cu.execute(sql1)
+sql2="insert into customer values(%s,%s,%s,%s)"
+val=[('12','arun','58','India'),
+('55','ramu','45','US'),
+('78','reethu','23','India'),
+('67','biju','34','US'),
+('44','minu','44','India'),
+('46','jiji','45','India'),
+('67','ravi','52','Dubai') ]
+cu.executemany(sql2,val)
+db.commit()
+sql3="select count(customer_id),country from customer group
+by country"
+cu.execute(sql3)
+details=cu.fetchall()
+for i in details:
+print(i)
+db.close()
