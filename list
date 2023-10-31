@@ -1,0 +1,23 @@
+        l3=[20,30,40,59,69,99,76,87,90]
+print(l3)
+print("list slicing",l3[2:5])
+print("count is",l3.count(30))
+l3.append(200)
+print("appending element",l3)
+print("index is",l3.index(20))
+print("max of list",max(l3))
+print("minimum of list",min(l3))
+print("length of list is",len(l3))
+l3.reverse()
+print("revered list",l3)
+print("popped element",l3.pop(0))
+print("sorted is",sorted(l3))
+print(l3)
+l3.sort()
+print("after sorting",l3)
+l5=l3.copy
+print("copied list is",l5)
+l3=l3*2
+print(l3)
+print((40 in l3))
+print((500in l3))
