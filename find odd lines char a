@@ -1,0 +1,13 @@
+import re
+f = open("apples.txt", "r")
+txt = f.readlines()
+print(txt)
+l = len(txt)
+f2 = open("apples1.txt", "w")
+for i in range(0 , l):
+    x = re.search('a', txt[i])
+    if not x:
+        f2.write(txt[i])
+f2.close()
+f2 = open("apples1.txt", "r")
+print(f2.read())
