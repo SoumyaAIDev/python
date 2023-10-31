@@ -1,0 +1,17 @@
+def fact(n,x):
+    f1 = 1
+    fact1 = 1
+    for i in range(1,n+1):
+        f1 = f1 * x
+        fact1 = fact1 * i
+    return f1,fact1
+    
+    
+    import findf
+n = int(input("Enter N Value: "))
+s = 1
+x = int(input("enter x value"))
+for i in range(1,n+1):
+    r1, r2 = findf.fact(i,x)
+    s = s+(r1/r2)
+print("Sum is ",s)
