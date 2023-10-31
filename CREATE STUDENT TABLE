@@ -1,0 +1,32 @@
+import mysql.connector as conn
+db=conn.connect(host="localhost", user="root",
+password="root",database="emp")
+cu=db.cursor()
+sql1="create table student( s_id varchar(10),name varchar(20),dept
+varchar(10),marks varchar(10));"
+cu.execute(sql1)
+sql2="insert into student values(%s,%s,%s,%s)"
+val=[('12','arun','bca','78'),
+('55','bharath','bca','89'),
+('78','surya','bca','99'),
+('67','sai','bca','68') ]
+cu.executemany(sql2,val)
+db.commit()
+sql3="select max(marks) from student"
+cu.execute(sql3)
+max1=cu.fetchall()
+print("maximum is ",max1)
+sql4="select min(marks) from student"
+cu.execute(sql4)
+min1=cu.fetchall()
+print("min is",min1)
+
+sql5="select sum(marks) from student"
+cu.execute(sql5)
+sum1=cu.fetchall()
+print("sum is",sum1)
+sql6="select avg(marks) from student"
+cu.execute(sql6)
+avg1=cu.fetchall()
+print("avg is",avg1)
+db.close()
