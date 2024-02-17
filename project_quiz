@@ -1,0 +1,24 @@
+##project is to create quiz for primary students,then we can to display the final score
+user_name=input("Please ! Enter the student name :")
+welcome_message="Hi",+user_name+ "welcome to the quiz!"
+
+
+#5 Random question shoulb be asked ,Based on addition,substration,division,multiplication.
+question="what is 3+2 ?"
+user_answer=input(question)
+
+question="what is 3-2 ?"
+user_answer=input(question)
+
+
+question="what is 23*4?"
+user_answer=input(question)
+
+question="what is 23/9 ?"
+user_answer=input(question)
+
+question="what is 23/5 ?"
+user_answer=input(question)
+
+fare_message="thank you for giving this quiz",+user_name+"you will get your results soon:"
+print(fare_message)
